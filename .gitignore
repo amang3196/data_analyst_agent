@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Secrets
+.env
+
+# Data (download from Kaggle; DuckDB file is rebuilt by scripts/)
+data/raw/*
+!data/raw/.gitkeep
+data/*.duckdb
+data/*.duckdb.wal
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Local virtual environments and tool folders
+.data_analyst_env/
+venv/
+env/
+.agents/
+.claude/
+
+Data Analyst Agent — Architecture.md

@@ -1,0 +1,27 @@
+# --- Data ---
+duckdb==1.5.6
+pandas==3.0.6
+
+# --- Agent ---
+langgraph==1.2.15
+langchain-core==1.6.10
+langchain-google-genai==4.4.2
+sqlglot==30.23.0
+pydantic==2.14.1
+pydantic-settings==2.16.0
+
+# --- API ---
+fastapi==0.143.1
+uvicorn[standard]==0.54.0
+
+# --- UI ---
+streamlit==1.66.0
+requests==2.34.2
+
+# --- Tracing ---
+langfuse==5.0.1
+
+# --- Dev ---
+pytest==9.1.1
+ruff==0.17.0
+ipykernel==7.4.0
