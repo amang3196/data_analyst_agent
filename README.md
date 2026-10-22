@@ -201,7 +201,3 @@ Example stream:
 - **A query can run and still be logically wrong.** The notes file reduces this, and showing the SQL lets users check, but an eval suite is the real fix.
 - **Free-tier limits.** Gemini's free tier can be slow or busy at peak times; the fallback model helps but doesn't remove this.
 - **Local only.** 
-
-## Author
-
-**_Your Name_** · [LinkedIn](_your-linkedin-url_) · [Email](mailto:_your-email_)
