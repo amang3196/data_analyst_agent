@@ -86,11 +86,11 @@ flowchart LR
 
 ```mermaid
 flowchart LR
-    UI["Streamlit chat UI"] -- "POST /ask/stream" --> API["FastAPI"]
-    API -- "live progress (NDJSON)" --> UI
-    API --> G["LangGraph agent"]
-    G --> LLM["Gemini<br/>(+ fallback model)"]
-    G --> DB[("DuckDB<br/>read-only")]
+    UI[Streamlit chat UI] -->|POST /ask/stream| API[FastAPI]
+    API -->|live progress as NDJSON| UI
+    API --> G[LangGraph agent]
+    G --> LLM[Gemini + fallback model]
+    G --> DB[(DuckDB read-only)]
 ```
 
 The UI never imports agent code. It only talks to the API over HTTP, so the frontend and backend can be deployed separately.
