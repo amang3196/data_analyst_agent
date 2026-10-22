@@ -85,15 +85,15 @@ flowchart LR
 ### The system
 
 ```mermaid
-flowchart LR
-    UI[Streamlit chat UI] -->|POST /ask/stream| API[FastAPI]
-    API -->|live progress as NDJSON| UI
+flowchart TB
+    UI[Streamlit UI] -->|question| API[FastAPI]
+    API -.->|live steps + answer| UI
     API --> G[LangGraph agent]
-    G --> LLM[Gemini + fallback model]
-    G --> DB[(DuckDB read-only)]
+    G --> LLM[Gemini]
+    G --> DB[(DuckDB)]
 ```
 
-The UI never imports agent code. It only talks to the API over HTTP, so the frontend and backend can be deployed separately.
+The UI sends the question to `POST /ask/stream` and receives live progress lines (NDJSON) followed by the final answer. The agent calls Gemini (with an automatic fallback model) and queries DuckDB in read-only mode. The UI never imports agent code, so the frontend and backend can be deployed separately.
 
 ## Tech stack
 
