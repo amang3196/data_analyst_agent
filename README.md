@@ -13,7 +13,9 @@ A self-correcting, multi-step AI agent built with **LangGraph**. It writes SQL, 
 
 ## Demo
 
-> **Video walkthrough:** _add your video link here_
+> **Video walkthrough:** _[YouTube Link](https://youtu.be/xdPMQzwJGHI)_
+
+> **Sample Screenshot:**  ![](Data_analyst_agent_sample_ss.png)
 
 <!-- Optional: add a screenshot or GIF at docs/demo.gif and uncomment the next line -->
 <!-- ![Demo](docs/demo.gif) -->
